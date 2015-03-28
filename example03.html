@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Example 03</title>
+    <script>
+      var globalX = 10;
+      alert("X:" + globalX);
+
+      function blockExample(){
+        var innerX = "Sandeep";
+        var globalX = 99;
+        alert("Inside Block: "+globalX);
+      }
+
+      blockExample();
+      alert(globalX);
+      alert(innerX);
+    </script>
+  </head>
+  <body>
+    Check console
+  </body>
+</html>
