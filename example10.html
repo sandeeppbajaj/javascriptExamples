@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Example 10 - Closure Example</title>
+  </head>
+  <body>
+    Check console for this example.
+    <script>
+        function testClosure(){
+          var x=4;
+          function closeX(){
+            return x;
+          }
+          return closeX;
+        }
+        var getX = testClosure();
+        console.log(getX());
+     </script>
+  </body>
+</html>
