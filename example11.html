@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Example 11 - Closure Example</title>
+  </head>
+  <body>
+    Check console for this example.
+    <script>
+        function buyTrainTicket(personType){
+          return function(name){
+            alert("You bought a "+personType+" ticket for "+ name);
+          }
+        }
+
+        var buyAdultTrainTicket = buyTrainTicket("Adult");
+        var buyChildTrainTicket = buyTrainTicket("Child");
+
+        buyAdultTrainTicket("John");
+        buyChildTrainTicket("Jake");
+     </script>
+  </body>
+</html>
