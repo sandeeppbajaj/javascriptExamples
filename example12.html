@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Example 12 - Inheritance</title>
+    <script>
+        function Animal(color,legs){
+          this.color = color;
+          this.legs = legs;
+        }
+
+        Animal.prototype = {
+          getColor : function(){
+            return this.color;
+          },
+          getLegs : function(){
+            return this.legs;
+          }
+        }
+
+        function Dog(color, legs,breed){
+          Animal.call(this, color, legs);
+          this.breed = breed;
+        }
+
+        Dog.prototype = Object.create(Animal.prototype, {
+          getBreed : {
+            value: function(){
+              return this.breed;
+            }
+          }
+        });
+
+        //Dog.prototype.constructor = Dog;
+
+        var b = new Dog('Brown',4,'Bull Dog');
+        console.log(b.getColor());
+        console.log(b.getLegs());
+        console.log(b.getBreed());
+     </script>
+  </head>
+  <body>
+  </body>
+</html>

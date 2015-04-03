@@ -1,0 +1,15 @@
+<html>
+  <title>Example 15 - Get Contents of Nested Element</title>
+<body>
+<div id="demo">
+    <p>This is first Paragraph</p>
+    <p>This is second Paragraph</p>
+</div>
+
+<script>
+  var x = document.getElementById('demo');
+  var y = x.getElementsByTagName('p');
+  console.log('Contents of Paragraph 2:'+y[1].innerHTML);
+</script>
+</body>
+</html>

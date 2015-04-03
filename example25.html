@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="id01"></div>
+
+<script>
+var myArr = [
+{
+"display": "HTML Tutorial",
+"url": "http://www.w3schools.com/html/default.asp"
+},
+{
+"display": "CSS Tutorial",
+"url": "http://www.w3schools.com/css/default.asp"
+},
+{
+"display": "JavaScript Tutorial",
+"url": "http://www.w3schools.com/js/default.asp"
+},
+{
+"display": "jQuery Tutorial",
+"url": "http://www.w3schools.com/jquery/default.asp"
+},
+{
+"display": "JSON Tutorial",
+"url": "http://www.w3schools.com/json/default.asp"
+},
+{
+"display": "AJAX Tutorial",
+"url": "http://www.w3schools.com/ajax/default.asp"
+},
+{
+"display": "SQL Tutorial",
+"url": "http://www.w3schools.com/sql/default.asp"
+},
+{
+"display": "PHP Tutorial",
+"url": "http://www.w3schools.com/php/default.asp"
+},
+{
+"display": "XML Tutorial",
+"url": "http://www.w3schools.com/xml/default.asp"
+}
+];
+myFunction(myArr);
+
+function myFunction(arr) {
+    var out = "";
+    var i;
+    for(i = 0; i < arr.length; i++) {
+        out += '<a href="' + arr[i].url + '">' +
+        arr[i].display + '</a><br>';
+    }
+    document.getElementById("id01").innerHTML = out;
+}
+</script>
+
+</body>
+</html>
